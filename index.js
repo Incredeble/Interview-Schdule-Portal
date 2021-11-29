@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             loadDropdownList(data);
         },
         error: function(error) {
-            alert("error in loading data");
+            console.log("error in loading data");
         }
     });
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             loadInterviewTable(data);
         },
         error: function(error) {
-            alert("error in loading getAllInterview data");
+            console.log("error in loading getAllInterview data");
         }
     });
 });
@@ -118,7 +118,7 @@ function deleteInterviewById(id) {
             location.reload();
         },
         error: function(error) {
-            alert("error in loading getAllInterview data");
+            console.log("error in loading getAllInterview data");
         }
     });
 }
@@ -196,7 +196,7 @@ submitButton.onclick = function () {
         alert("Interviewer and Interviewee cannot be same");
         return;
     }
-    if(start === "" || end === "") {
+    else if(start === "" || end === "") {
         alert("Select Date and Time");
         return;
     }
@@ -239,7 +239,7 @@ function insertRowIntoInterviewTable(data) {
         alert("Interviewer Not available at that time");
         return;
     }
-    if(data.id === -2) {
+    else if(data.id === -2) {
         alert("Interviewee Not available at that time");
         return;
     }
